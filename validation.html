@@ -3,43 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task 1 — HTML5 Validation</title>
+  <meta name="description" content="Atelier Gallery. A space for contemporary art, independent voices, and new perspectives. Get in touch with the gallery.">
+  <title>Plan a visit | Atelier Gallery</title>
+
+  <link rel="stylesheet" href="styles.css">
   <script src="forms.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Part 1. Basic HTML Forms</h1>
-    <nav aria-label="Assignment tasks">
-      <a href="index.html">Task 0: Simple contact form</a> |
-      <a href="validation.html" aria-current="page">Task 1: HTML5 validation</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Atelier Gallery home">atelier<span>GALLERY &amp; CONTEMPORARY ART</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Contact</a>
+      <a href="validation.html" aria-current="page">Plan a visit</a>
+      <a href="bootstrap.html">For artists</a>
+      <a href="bootstrap-validation.html">Art enquiries</a>
     </nav>
   </header>
-  <main>
-    <h2>Task 1. Form with HTML5 Validation</h2>
-    <p>All fields are required.</p>
-    <form>
-      <p>
-        <label for="name">Name</label><br>
-        <input type="text" id="name" name="name" autocomplete="name"
-               required minlength="2" maxlength="60" aria-describedby="name-help"><br>
-        <small id="name-help">Enter between 2 and 60 characters.</small>
-      </p>
-      <p>
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" autocomplete="email"
-               required maxlength="254" aria-describedby="email-help"><br>
-        <small id="email-help">Use an email address such as name@example.com.</small>
-      </p>
-      <p>
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="6" cols="30"
-                  required minlength="10" maxlength="1000" aria-describedby="message-help"></textarea><br>
-        <small id="message-help">Enter between 10 and 1,000 characters.</small>
-      </p>
-      <button type="submit">Submit</button>
-      <p role="status" id="form-status"></p>
-    </form>
-    <p>This is a practice form. Messages are not sent to a server.</p>
+  <main class="contact-layout" id="main">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">A SPACE FOR ART &amp; DIALOGUE</p>
+      <h1 id="page-title">Take your time.<br><em>Look a little closer.</em></h1>
+      <p class="intro-copy">Ask about visiting the gallery, group tours, or access requirements. Make room for a moment with art.</p>
+      <figure class="gallery-work">
+        <img src="assets/gallery-study.svg" alt="Three abstract artworks with architectural shapes in terracotta, burgundy, and ivory" width="960" height="560">
+        <figcaption><span>STUDIES IN BALANCE</span><span>Form / Colour / Rhythm</span></figcaption>
+      </figure>
+    </section>
+    <section class="contact-card" aria-labelledby="form-title">
+      <div class="card-heading"><span class="eyebrow">CORRESPONDENCE</span><span aria-hidden="true">&#8599;</span></div>
+      <h2 id="form-title">Plan your visit</h2>
+      <p class="card-subtitle">Tell us how we can help you explore the gallery.</p>
+      <p class="required-note">All fields are required.</p>
+      <form class="contact-form">
+        <div class="field">
+        <label class="form-label" for="name">Name</label>
+        <input class="field-control" type="text" id="name" name="name" placeholder="Your name" aria-describedby="name-help" required maxlength="60" minlength="2" autocomplete="name">
+        <small class="form-text" id="name-help">The name you would like us to use.</small></div>
+<div class="field">
+        <label class="form-label" for="email">Email</label>
+        <input class="field-control" type="email" id="email" name="email" placeholder="you@example.com" aria-describedby="email-help" required maxlength="254" autocomplete="email">
+        <small class="form-text" id="email-help">An address where we can reach you.</small></div>
+<div class="field-wide">
+        <label class="form-label" for="message">Message</label>
+        <textarea class="field-control" id="message" name="message" placeholder="What would you like to know?" aria-describedby="message-help" required maxlength="1000" minlength="10" rows="5"></textarea>
+        <small class="form-text" id="message-help">A few details make all the difference (10&ndash;1,000 characters).</small></div>
+
+        <div class="field-wide">
+          <button class="send-button" type="submit">Review enquiry <span aria-hidden="true">&#8599;</span></button>
+          <p class="privacy-note">Enquiries can be reviewed here. Online sending is currently unavailable.</p>
+          <p role="status" id="form-status"></p>
+        </div>
+      </form>
+    </section>
   </main>
+  <footer class="site-footer"><span>&copy; 2026 Atelier Gallery</span><span>Art is a way of seeing.</span><a href="index.html">Get in touch &#8599;</a></footer>
 </body>
 </html>
