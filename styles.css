@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --paper: #f7f4ee;
   --ink: #302b29;
   --muted: #756d66;
@@ -6,53 +6,62 @@
   --accent: #762f3c;
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, sans-serif; font-size: 14px; line-height: 1.6; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; }
 a { color: inherit; text-decoration: none; }
 button, input, textarea { font: inherit; }
 .site-header { max-width: 1320px; margin: auto; padding: 28px 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; border-bottom: 1px solid var(--line); }
 .brand { display: flex; flex-direction: column; font: 46px/.9 Georgia, serif; letter-spacing: -2px; }
-.brand span { margin-top: 14px; font: 8px/1.4 Arial, sans-serif; letter-spacing: 2px; }
+.brand span { margin-top: 14px; font: 10px/1.4 Arial, sans-serif; letter-spacing: 2px; }
 .brand:hover { color: var(--accent); }
 nav { display: flex; flex-wrap: wrap; gap: 28px; }
-nav a { padding: 10px 0; border-bottom: 1px solid transparent; font-size: 12px; color: var(--muted); }
+nav a { padding: 10px 0; border-bottom: 1px solid transparent; font-size: 14px; color: var(--muted); }
 nav a:hover, nav a[aria-current='page'] { color: var(--accent); border-bottom-color: var(--accent); }
 .contact-layout { max-width: 1240px; margin: auto; padding: 62px 40px 56px; display: grid; grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: 76px; align-items: start; }
-.eyebrow { margin: 0 0 22px; color: var(--accent); font-size: 9px; font-weight: 500; letter-spacing: 2px; line-height: 1.5; }
+.eyebrow { margin: 0 0 22px; color: var(--accent); font-size: 11px; font-weight: 500; letter-spacing: 2px; line-height: 1.5; }
 h1 { margin: 0 0 23px; font: 400 clamp(39px,4.4vw,62px)/1.08 Georgia, serif; letter-spacing: -2.4px; }
 h1 em { color: var(--accent); font-weight: 400; }
-.intro-copy { max-width: 410px; min-height: 69px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.intro-copy { max-width: 410px; min-height: 69px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
 .gallery-work { margin: 28px 0 0; }
 .gallery-work img { display: block; width: 100%; height: auto; border: 1px solid #dfd5c7; }
-.gallery-work figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 12px; color: var(--muted); font-size: 9px; line-height: 1.5; }
+.gallery-work figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 12px; color: var(--muted); font-size: 11px; line-height: 1.5; }
 .gallery-work figcaption span:first-child { letter-spacing: 1.5px; color: var(--ink); }
-.gallery-work figcaption span:last-child { font-family: Georgia, serif; font-style: italic; font-size: 11px; }
+.gallery-work figcaption span:last-child { font-family: Georgia, serif; font-style: italic; font-size: 13px; }
 .contact-card { margin-top: 0; padding: 30px; border: 1px solid var(--line); background: #fcfaf6; }
 .card-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
 .card-heading .eyebrow { margin: 0; }
 .card-heading > span:last-child { color: var(--accent); font-size: 23px; line-height: 1; }
 h2 { margin: 0 0 10px; font: 400 32px/1.2 Georgia, serif; letter-spacing: -.8px; }
-.card-subtitle { margin: 0 0 12px; min-height: 40px; color: var(--muted); font-size: 12px; line-height: 1.65; }
-.required-note { margin: 0 0 20px; font-size: 10px; line-height: 1.5; color: var(--muted); }
+.card-subtitle { margin: 0 0 12px; min-height: 40px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.required-note { margin: 0 0 20px; font-size: 12px; line-height: 1.5; color: var(--muted); }
 .contact-form { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px; }
 .contact-form > div { min-width: 0; }
 .field-wide { grid-column: 1 / -1; }
 /* Match the plain HTML form to Bootstrap's 16px grid gutters. */
 .contact-card .row { --bs-gutter-x: 16px; --bs-gutter-y: 16px; }
-.form-label { display: block; margin: 0 0 8px; font-size: 11px; font-weight: 500; line-height: 1.6; }
-.field-control, .form-control { display: block; width: 100%; padding: 11px 12px; border: 1px solid #d7cec3; border-radius: 0; background-color: #fffefa; color: var(--ink); font-family: Arial, sans-serif; font-size: 12px; font-weight: 400; line-height: 1.5; appearance: none; }
+.form-label { display: block; margin: 0 0 8px; font-size: 13px; font-weight: 500; line-height: 1.6; }
+.field-control, .form-control { display: block; width: 100%; padding: 11px 12px; border: 1px solid #d7cec3; border-radius: 0; background-color: #fffefa; color: var(--ink); font-family: Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; appearance: none; }
 textarea.field-control, textarea.form-control { height: 130px; min-height: 130px; resize: vertical; }
 .field-control::placeholder, .form-control::placeholder { color: #898079; opacity: 1; }
 .field-control:focus, .form-control:focus { background-color: #fffefa; color: var(--ink); border-color: var(--accent); outline: none; box-shadow: 0 0 0 2px #762f3c14; }
-.form-text { display: block; margin: 6px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
-.send-button { display: flex; justify-content: space-between; align-items: center; width: 100%; margin: 0; padding: 13px 17px; border: 1px solid var(--accent); border-radius: 0; background: var(--accent); color: #fff; font-size: 12px; font-weight: 400; line-height: 1.5; cursor: pointer; transition: background .15s; }
+.form-text { display: block; margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.send-button { display: flex; justify-content: space-between; align-items: center; width: 100%; margin: 0; padding: 13px 17px; border: 1px solid var(--accent); border-radius: 0; background: var(--accent); color: #fff; font-size: 14px; font-weight: 400; line-height: 1.5; cursor: pointer; transition: background .15s; }
 .send-button:hover { background: #58232d; }
 .send-button span { font-size: 21px; line-height: 1; }
-.privacy-note { margin: 12px 0 0; color: var(--muted); text-align: center; font-size: 10px; line-height: 1.6; }
+.privacy-note { margin: 12px 0 0; color: var(--muted); text-align: center; font-size: 12px; line-height: 1.6; }
 #form-status:empty { display: none; }
-#form-status { margin: 14px 0 0; padding: 12px; border-left: 2px solid var(--accent); background: #f0e9e2; font-size: 12px; line-height: 1.6; }
-.invalid-feedback, .valid-feedback { font-size: 11px; }
-.site-footer { max-width: 1240px; display: flex; justify-content: space-between; gap: 16px; margin: auto; padding: 23px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; }
-.site-footer > span:nth-child(2) { font: italic 14px Georgia, serif; }
+#form-status { margin: 14px 0 0; padding: 12px; border-left: 2px solid var(--accent); background: #f0e9e2; font-size: 14px; line-height: 1.6; }
+.invalid-feedback, .valid-feedback { font-size: 13px; }
+.form-select { border-color: #d7cec3; border-radius: 0; background-color: #fffefa; color: var(--ink); padding: 11px 36px 11px 12px; font-size: 16px; line-height: 1.5; }
+.form-select:focus { border-color: var(--accent); box-shadow: 0 0 0 2px #762f3c14; }
+.choice-group legend { float: none; width: auto; margin-bottom: 8px; font-size: 13px; font-weight: 500; }
+.form-check-label { font-size: 14px; }
+.form-check-input:checked { background-color: var(--accent); border-color: var(--accent); }
+.form-check-input:focus { border-color: var(--accent); box-shadow: 0 0 0 2px #762f3c14; }
+.optional-note { color: var(--muted); font-weight: 400; }
+.reset-button { justify-content: center; background: transparent; color: var(--accent); }
+.reset-button:hover { background: #f0e9e2; }
+.site-footer { max-width: 1240px; display: flex; justify-content: space-between; gap: 16px; margin: auto; padding: 23px 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.site-footer > span:nth-child(2) { font: italic 16px Georgia, serif; }
 .site-footer a { color: var(--accent); }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .skip-link { position: absolute; top: -80px; left: 16px; z-index: 5; padding: 10px; background: #fff; }
@@ -79,6 +88,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   .contact-layout { padding-left: 18px; padding-right: 18px; }
   .contact-card { padding: 20px; }
   nav { gap: 17px; }
-  nav a { font-size: 11px; }
+  nav a { font-size: 13px; }
   h2 { font-size: 28px; }
 }

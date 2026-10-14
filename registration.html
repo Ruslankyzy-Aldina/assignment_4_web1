@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Atelier Gallery community and share your interests in art.">
+  <title>Join the gallery | Atelier Gallery</title>
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="registration.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Atelier Gallery home">atelier<span>GALLERY &amp; CONTEMPORARY ART</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Contact</a>
+      <a href="validation.html">Plan a visit</a>
+      <a href="bootstrap.html">For artists</a>
+      <a href="bootstrap-validation.html">Art enquiries</a>
+      <a href="registration.html" aria-current="page">Join the gallery</a>
+    </nav>
+  </header>
+  <main class="contact-layout" id="main">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">A COMMUNITY OF CURIOUS MINDS</p>
+      <h1 id="page-title">A place for art.<br><em>A place for you.</em></h1>
+      <p class="intro-copy">From a first encounter to a lifelong interest. Share your love of art and become part of the gallery community.</p>
+      <figure class="gallery-work">
+        <img src="assets/gallery-study.svg" alt="Three abstract artworks in terracotta, burgundy, and ivory" width="960" height="560">
+        <figcaption><span>STUDIES IN BALANCE</span><span>Form / Colour / Rhythm</span></figcaption>
+      </figure>
+    </section>
+    <section class="contact-card" aria-labelledby="form-title">
+      <div class="card-heading"><span class="eyebrow">GALLERY MEMBERSHIP</span><span aria-hidden="true">&#8599;</span></div>
+      <h2 id="form-title">Join the gallery</h2>
+      <p class="card-subtitle">Tell us a little about yourself and your interests.</p>
+      <p class="required-note">All fields are required except hobbies.</p>
+      <form id="registration-form" class="row g-3" method="post">
+        <div class="col-md-6">
+          <label class="form-label" for="first-name">First name</label>
+          <input class="form-control" type="text" id="first-name" name="firstName" autocomplete="given-name" placeholder="First name" required maxlength="60" pattern=".*\S.*" aria-describedby="first-name-error first-name-success">
+          <div class="invalid-feedback" id="first-name-error">Enter your first name.</div>
+          <div class="valid-feedback" id="first-name-success">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="last-name">Last name</label>
+          <input class="form-control" type="text" id="last-name" name="lastName" autocomplete="family-name" placeholder="Last name" required maxlength="60" pattern=".*\S.*" aria-describedby="last-name-error last-name-success">
+          <div class="invalid-feedback" id="last-name-error">Enter your last name.</div>
+          <div class="valid-feedback" id="last-name-success">Looks good!</div>
+        </div>
+        <div class="col-12">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required maxlength="254" aria-describedby="email-error email-success">
+          <div class="invalid-feedback" id="email-error">Enter a valid email address.</div>
+          <div class="valid-feedback" id="email-success">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="password">Password</label>
+          <input class="form-control" type="password" id="password" name="password" autocomplete="new-password" required minlength="8" maxlength="64" aria-describedby="password-help password-error password-success">
+          <div class="invalid-feedback" id="password-error">Use between 8 and 64 characters.</div>
+          <div class="valid-feedback" id="password-success">Looks good!</div>
+          <small class="form-text" id="password-help">Use between 8 and 64 characters.</small>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="confirm-password">Confirm password</label>
+          <input class="form-control" type="password" id="confirm-password" name="confirmPassword" autocomplete="new-password" required minlength="8" maxlength="64" aria-describedby="confirm-password-error confirm-password-success">
+          <div class="invalid-feedback" id="confirm-password-error">Repeat your password exactly.</div>
+          <div class="valid-feedback" id="confirm-password-success">Passwords match!</div>
+        </div>
+        <fieldset class="col-12 choice-group">
+          <legend>Gender</legend>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="gender-female" name="gender" value="female" required aria-describedby="gender-error gender-success">
+            <label class="form-check-label" for="gender-female">Female</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="gender-male" name="gender" value="male" required aria-describedby="gender-error gender-success">
+            <label class="form-check-label" for="gender-male">Male</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="gender-private" name="gender" value="prefer-not-to-say" required aria-describedby="gender-error gender-success">
+            <label class="form-check-label" for="gender-private">Prefer not to say</label>
+            <div class="invalid-feedback" id="gender-error">Choose one option.</div>
+            <div class="valid-feedback" id="gender-success">Looks good!</div>
+          </div>
+        </fieldset>
+        <fieldset class="col-12 choice-group">
+          <legend>Hobbies <span class="optional-note">(optional)</span></legend>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="hobby-painting" name="hobbies" value="painting">
+            <label class="form-check-label" for="hobby-painting">Painting</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="hobby-photography" name="hobbies" value="photography">
+            <label class="form-check-label" for="hobby-photography">Photography</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="hobby-reading" name="hobbies" value="reading">
+            <label class="form-check-label" for="hobby-reading">Reading</label>
+          </div>
+        </fieldset>
+        <div class="col-12">
+          <label class="form-label" for="country">Country</label>
+          <select class="form-select" id="country" name="country" autocomplete="country-name" required aria-describedby="country-error country-success">
+            <option value="" selected disabled>Select your country</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Kyrgyzstan">Kyrgyzstan</option>
+            <option value="Uzbekistan">Uzbekistan</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+            <option value="Other">Other</option>
+          </select>
+          <div class="invalid-feedback" id="country-error">Select your country.</div>
+          <div class="valid-feedback" id="country-success">Looks good!</div>
+        </div>
+        <div class="col-sm-8">
+          <button class="send-button" type="submit">Register <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="col-sm-4">
+          <button class="send-button reset-button" type="reset">Reset</button>
+        </div>
+        <div class="col-12">
+          <p class="privacy-note">Registration is a preview. Your details are not sent or saved.</p>
+          <p role="status" id="form-status"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><span>&copy; 2026 Atelier Gallery</span><span>Art is a way of seeing.</span><a href="index.html">Get in touch &#8599;</a></footer>
+</body>
+</html>
