@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 0 — Simple Contact Form</title>
+  <script src="forms.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Part 1. Basic HTML Forms</h1>
+    <nav aria-label="Assignment tasks">
+      <a href="index.html" aria-current="page">Task 0: Simple contact form</a> |
+      <a href="validation.html">Task 1: HTML5 validation</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Task 0. Simple Contact Form</h2>
+    <p>Send a message using the form below.</p>
+    <form>
+      <p>
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" autocomplete="name">
+      </p>
+      <p>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" autocomplete="email">
+      </p>
+      <p>
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="6" cols="30"></textarea>
+      </p>
+      <button type="submit">Submit</button>
+      <p role="status" id="form-status"></p>
+    </form>
+    <p>This is a practice form. Messages are not sent to a server.</p>
+  </main>
+</body>
+</html>
